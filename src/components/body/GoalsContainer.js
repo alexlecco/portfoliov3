@@ -1,4 +1,4 @@
-import AddModeratorIcon from '@mui/icons-material/AddModerator'
+import ArrowForward from '@mui/icons-material/ArrowForward'
 
 const GoalsContainer = ({ theme, goals, t, language }) => {
   const getGoalText = goal => (language === "english" ? goal.en : goal.es)
@@ -17,7 +17,7 @@ const GoalsContainer = ({ theme, goals, t, language }) => {
         {goals &&
           goals.map((goal, index) => (
             <div className='flex flex-row justify-start pb-2' key={index}>
-              <AddModeratorIcon />
+              <ArrowForward />
               <span className='pl-2'>{getGoalText(goal)}</span>
             </div>
           ))}

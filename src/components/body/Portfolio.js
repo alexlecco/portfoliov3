@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows"
-import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone"
+import DesktopWindowsIcon from "@mui/icons-material/DesktopWindows"
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone"
 
 function Portfolio({ project, typeProject, theme, language }) {
   const [descripionVisible, setDescripionVisible] = useState(false)

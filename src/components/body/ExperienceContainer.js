@@ -1,5 +1,5 @@
 import React from "react"
-import CheckIcon from "@material-ui/icons/Check"
+import CheckIcon from '@mui/icons-material/Check'
 
 const ExperienceContainer = ({ theme, experience, t, language }) => {
   const getDescription = description =>

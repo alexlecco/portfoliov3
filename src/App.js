@@ -12,6 +12,10 @@ import { user } from './react-portfolio'
 import Presentation from "./components/Presentation"
 import GoalsContainer from "./components/body/GoalsContainer"
 import SkillsContainer from "./components/body/SkillsContainer"
+import ExperienceContainer from "./components/body/ExperienceContainer"
+import PortfolioContainer from "./components/body/PortfolioContainer"
+import Contact from "./components/body/Contact"
+import Footer from "./components/Footer"
 
 let Element = Scroll.Element
 let scroller = Scroll.scroller
@@ -48,6 +52,7 @@ function App() {
     mentoring,
     skills,
     languages,
+    portfolio,
     social,
     claps,
   } = user
@@ -92,6 +97,30 @@ function App() {
         <Element name='skillsElement'>
           <SkillsContainer theme={theme} skills={skills} t={t} language={language} />
         </Element>
+
+        <Element name='experienceElement'>
+          <ExperienceContainer
+            theme={theme}
+            experience={experience}
+            t={t}
+            language={language}
+          />
+        </Element>
+
+        <Element name='portfolioElement'>
+          <PortfolioContainer
+            theme={theme}
+            portfolio={portfolio}
+            t={t}
+            language={language}
+          />
+        </Element>
+
+        <Element name='contactElement'>
+          <Contact theme={theme} socia={social} t={t} />
+        </Element>
+
+        <Footer name={name} theme={theme} />
 
       </div>
     </div>

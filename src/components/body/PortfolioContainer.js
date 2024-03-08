@@ -5,7 +5,7 @@ const PorfolioContainer = ({ theme, portfolio, t, language }) => {
   let webProjects = []
   let mobileProjects = []
   portfolio.projects.forEach(project =>
-    project.typeProject === "web"
+      project.typeProject === 'web'
       ? webProjects.push(project)
       : mobileProjects.push(project)
   )

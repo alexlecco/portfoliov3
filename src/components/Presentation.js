@@ -1,6 +1,7 @@
 // import { useState, useEffect } from "react"
 import { useState } from "react"
-import AddModeratorIcon from '@mui/icons-material/AddModerator'
+import GetAppIcon from "@mui/icons-material/GetApp";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
 import NavigatorMenu from "./NavigatorMenu"
 import { PDFDownloadLink } from "@react-pdf/renderer"
 import PdfStructure from "../pdf/PdfStructure"
@@ -106,7 +107,7 @@ const Presentation = ({
             className='flex flex-col items-center p-8 w-20 h-20 md:mr-2'
             onClick={changeTheme}
           >
-            <AddModeratorIcon
+            <Brightness4Icon
               fontSize='small'
               className='theme cursor-pointer'
               onMouseEnter={toggleLabelsVisible}
@@ -132,12 +133,12 @@ const Presentation = ({
         </div>
         <div className='flex flex-row'>
           <div
-            className='flex flex-col items-center p-6 w-24 h-20 md:mr-2'
+            className='flex flex-col items-center p-7 w-24 h-20 md:mr-2'
             // onClick={incrementClaps}
             onClick={() => {}}
           >
             <img
-              src='https://www.iconfinder.com/data/icons/celebration-and-party-8/96/clap-512.png'
+              src='https://cdn4.iconfinder.com/data/icons/hand-touch-gesture/64/hand_touch_gesture_claps_applause_apreciation-512.png'
               alt='clap'
               className={`cursor-pointer claps clap-img ${
                 theme === "Dark" ? "filter-inverse" : null
@@ -161,7 +162,7 @@ const Presentation = ({
               fileName='alex-resume.pdf'
               className='flex flex-col items-center'
             >
-              <AddModeratorIcon fontSize='small' className='resume cursor-pointer' />
+              <GetAppIcon fontSize='small' className='resume cursor-pointer' />
               {labelsVisible.resume && (
                 <p className='hidden md:inline noselect text-sm'>
                   {getMyResumeText}

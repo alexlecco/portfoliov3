@@ -184,7 +184,6 @@ const user = {
           typeProject: "mobile",
           url: "https://play.google.com/store/apps/details?id=com.alexlecco.semanautn2019"
         },
-        null,
         {
           description: {
             en: "A simple full-stack application that simulate functionalities of Tinder, as simulate like or dislike features.",
