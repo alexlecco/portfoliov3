@@ -1,9 +1,9 @@
-import React from "react";
-import { View, Text } from "@react-pdf/renderer";
+import React from "react"
+import { View, Text } from "@react-pdf/renderer"
 
 function Experience({ data, styles, t }) {
   const getDescription = description =>
-    data.language === "english" ? description.en : description.es;
+    data.language === "english" ? description.en : description.es
 
   return (
     <View style={styles.section}>
@@ -29,7 +29,7 @@ function Experience({ data, styles, t }) {
         )
       )}
     </View>
-  );
+  )
 }
 
-export default Experience;
+export default Experience

@@ -1,8 +1,8 @@
-import React from "react";
-import { View, Text } from "@react-pdf/renderer";
+import React from "react"
+import { View, Text } from "@react-pdf/renderer"
 
 function Skills({ data, styles, t }) {
-  const getSkill = skill => (data.language === "english" ? skill.en : skill.es);
+  const getSkill = skill => (data.language === "english" ? skill.en : skill.es)
 
   return (
     <View style={styles.section}>
@@ -18,11 +18,11 @@ function Skills({ data, styles, t }) {
                 </Text>
               ))}
             </View>
-          );
+          )
         })}
       </View>
     </View>
-  );
+  )
 }
 
-export default Skills;
+export default Skills

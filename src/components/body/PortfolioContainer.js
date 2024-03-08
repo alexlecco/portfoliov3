@@ -1,14 +1,14 @@
-import React from "react";
-import Portfolio from "./Portfolio";
+import React from "react"
+import Portfolio from "./Portfolio"
 
 const PorfolioContainer = ({ theme, portfolio, t, language }) => {
-  let webProjects = [];
-  let mobileProjects = [];
+  let webProjects = []
+  let mobileProjects = []
   portfolio.projects.forEach(project =>
     project.typeProject === "web"
       ? webProjects.push(project)
       : mobileProjects.push(project)
-  );
+  )
 
   return (
     <div
@@ -55,7 +55,7 @@ const PorfolioContainer = ({ theme, portfolio, t, language }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PorfolioContainer;
+export default PorfolioContainer

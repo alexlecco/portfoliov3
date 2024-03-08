@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
-import AddModeratorIcon from '@mui/icons-material/AddModerator';
-import NavigatorMenu from "./NavigatorMenu";
-import { PDFDownloadLink } from "@react-pdf/renderer";
-import PdfStructure from "../pdf/PdfStructure";
-// import database from "../firebase";
+// import { useState, useEffect } from "react"
+import { useState } from "react"
+import AddModeratorIcon from '@mui/icons-material/AddModerator'
+import NavigatorMenu from "./NavigatorMenu"
+import { PDFDownloadLink } from "@react-pdf/renderer"
+import PdfStructure from "../pdf/PdfStructure"
+// import database from "../firebase"
 
 const Presentation = ({
   flag,
@@ -36,48 +37,48 @@ const Presentation = ({
     language: false,
     claps: false,
     resume: false,
-  });
-  // const [localClaps, setLocalClaps] = useState(claps);
+  })
+  // const [localClaps, setLocalClaps] = useState(claps)
 
-  const profileTextColor = theme === "Dark" ? "text-teal-400" : "text-orange-900";
+  const profileTextColor = theme === "Dark" ? "text-teal-400" : "text-orange-900"
   const changeThemeText =
-    theme === "Dark" ? t("topbar.button1.light") : t("topbar.button1.dark");
-  const languageText = t("topbar.button2");
-  const clapsText = `${claps} ${t("topbar.button3")}`;
-  const getMyResumeText = t("topbar.button4");
+    theme === "Dark" ? t("topbar.button1.light") : t("topbar.button1.dark")
+  const languageText = t("topbar.button2")
+  const clapsText = `${claps} ${t("topbar.button3")}`
+  const getMyResumeText = t("topbar.button4")
 
   // useEffect(() => {
-  //   const userRef = database.ref().child("data").child("claps");
-  //   setTimeout(userRef.set(localClaps), 1000);
-  // }, [localClaps]);
+  //   const userRef = database.ref().child("data").child("claps")
+  //   setTimeout(userRef.set(localClaps), 1000)
+  // }, [localClaps])
 
   const toggleLabelsVisible = e => {
     switch (e.currentTarget.classList[1]) {
       case "theme":
-        setLabelsVisible({ ...labelsVisible, theme: !labelsVisible.theme });
-        break;
+        setLabelsVisible({ ...labelsVisible, theme: !labelsVisible.theme })
+        break
       case "language":
         setLabelsVisible({
           ...labelsVisible,
           language: !labelsVisible.language,
-        });
-        break;
+        })
+        break
       case "claps":
-        setLabelsVisible({ ...labelsVisible, claps: !labelsVisible.claps });
-        break;
+        setLabelsVisible({ ...labelsVisible, claps: !labelsVisible.claps })
+        break
       default:
-        setLabelsVisible({ ...labelsVisible, resume: !labelsVisible.resume });
-        break;
+        setLabelsVisible({ ...labelsVisible, resume: !labelsVisible.resume })
+        break
     }
-  };
+  }
 
   const handleChangeLanguage = () => {
-    changeLanguage(language);
-  };
+    changeLanguage(language)
+  }
 
   // const incrementClaps = () => {
-  //   setLocalClaps(claps + 1);
-  // };
+  //   setLocalClaps(claps + 1)
+  // }
 
   const userData = {
     language,
@@ -95,7 +96,7 @@ const Presentation = ({
     languages,
     experience,
     mentoring,
-  };
+  }
 
   return (
     <div className='h-screen md:flex md:flex-col md:justify-around'>
@@ -204,7 +205,7 @@ const Presentation = ({
       </div>
       <NavigatorMenu theme={theme} scroller={scroller} t={t} />
     </div>
-  );
-};
+  )
+}
 
-export default Presentation;
+export default Presentation

@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@layer utilities {
+  .background-shadow {
+    text-shadow: 2px 2px 8px #000000;
   }
 }
 
-.App-header {
+/*
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+*/
+
+.Dark {
+  text-align: center;
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /*background-color: darkviolet;*/
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Dark-transparent {
+  text-align: center;
+  /*background-color: darkviolet;*/
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Light {
+  text-align: center;
+  background-color: #bcac80;
+  /*background-color: darkviolet;*/
+  color: #211f19;
+}
+
+.Light-transparent {
+  text-align: center;
+  /*background-color: darkviolet;*/
+  color: #211f19;
+}
+
+.description {
+  font-weight: 100;
+  padding: 20px 10px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container .project-name,
+.study-info {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  width: 70%;
+}
+
+.presentation-avatar {
+  height: 30vmin;
+  pointer-events: none;
+}
+
+.presentation-flag {
+  height: 45px; /*5vmin*/
+  pointer-events: none;
+}
+
+@media (min-width: 767px) {
+  .image__left {
+    max-width: 165px;
+    max-height: 165px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .presentation__right {
+    padding-left: 2%;
   }
+
+  .presentation__left {
+    padding-right: 2%;
+  }
+}
+
+.skill-info {
+  background-color: #ab8c20;
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #fff;
+}
+
+.svg-icon circle {
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.unstyled-button:focus {
+  font-size: 100%;
+  font-family: inherit;
+  border: 0;
+  padding: 0;
+}
+
+.projectContainer {
+  transition: all 0.5s ease;
+}
+
+.filter-inverse {
+  filter: invert(1);
+}
+
+.clap-img {
+  width: 28px;
+}
+
+img,
+video {
+  width: 150%;
+}
+
+.contact-height {
+  height: 89vh;
 }

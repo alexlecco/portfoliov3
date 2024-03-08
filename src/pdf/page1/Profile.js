@@ -1,5 +1,5 @@
-import React from "react";
-import { View, Text } from "@react-pdf/renderer";
+import React from "react"
+import { View, Text } from "@react-pdf/renderer"
 
 function Profile({ data, styles, t }) {
   return (
@@ -10,4 +10,4 @@ function Profile({ data, styles, t }) {
   );
 }
 
-export default Profile;
+export default Profile

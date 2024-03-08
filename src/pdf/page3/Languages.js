@@ -1,9 +1,9 @@
-import React from "react";
-import { View, Text } from "@react-pdf/renderer";
+import React from "react"
+import { View, Text } from "@react-pdf/renderer"
 
 function Languages({ data, styles, t }) {
   const getLanguage = language =>
-    data.language === "english" ? language.en : language.es;
+    data.language === "english" ? language.en : language.es
 
   return (
     <View style={styles.section}>
@@ -14,7 +14,7 @@ function Languages({ data, styles, t }) {
         </Text>
       ))}
     </View>
-  );
+  )
 }
 
-export default Languages;
+export default Languages

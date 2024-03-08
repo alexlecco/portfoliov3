@@ -1,4 +1,4 @@
-import Skill from "./Skill";
+import Skill from "./Skill"
 
 const SkillsContainer = ({ theme, skills, t, language }) => {
   return (
@@ -23,7 +23,7 @@ const SkillsContainer = ({ theme, skills, t, language }) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SkillsContainer;
+export default SkillsContainer

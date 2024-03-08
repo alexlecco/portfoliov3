@@ -1,9 +1,9 @@
-import React from "react";
-//import useWindowHeight from "../../hooks/useWindowHeight";
+import React from "react"
+//import useWindowHeight from "../../hooks/useWindowHeight"
 
 const GoalsContainer = ({ theme, social, t }) => {
-  //const { height } = useWindowHeight();
-  //const sectionHeight = height - 72;
+  //const { height } = useWindowHeight()
+  //const sectionHeight = height - 72
 
   return (
     <div
@@ -37,7 +37,7 @@ const GoalsContainer = ({ theme, social, t }) => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default GoalsContainer;
+export default GoalsContainer

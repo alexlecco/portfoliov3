@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
 const Study = ({ info }) => {
-  const { level, place, year, photo } = info;
+  const { level, place, year, photo } = info
 
   return (
     <div className="image-container md:h-56 overflow-hidden md:w-1/2">
@@ -12,7 +12,7 @@ const Study = ({ info }) => {
         <p>promoción: {year} </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Study;
+export default Study

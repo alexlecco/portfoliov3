@@ -1,5 +1,5 @@
-import React from "react";
-import Study from "./Study";
+import React from "react"
+import Study from "./Study"
 
 const StudiesContainer = ({ studies }) => {
   return (
@@ -9,7 +9,7 @@ const StudiesContainer = ({ studies }) => {
         {studies && studies.map((study) => <Study info={study} />)}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default StudiesContainer;
+export default StudiesContainer

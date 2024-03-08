@@ -1,13 +1,13 @@
-import React from "react";
-import { Document, Page, StyleSheet } from "@react-pdf/renderer";
-import Presentation from "./page1/Presentation";
-import Profile from "./page1/Profile";
-import Goals from "./page1/Goals";
-import Studies from "./page1/Studies";
-import Skills from "./page2/Skills";
-import Languages from "./page3/Languages";
-import Experience from "./page3/Experience";
-import Mentoring from "./page4/Mentoring";
+import React from "react"
+import { Document, Page, StyleSheet } from "@react-pdf/renderer"
+import Presentation from "./page1/Presentation"
+import Profile from "./page1/Profile"
+import Goals from "./page1/Goals"
+import Studies from "./page1/Studies"
+import Skills from "./page2/Skills"
+import Languages from "./page3/Languages"
+import Experience from "./page3/Experience"
+import Mentoring from "./page4/Mentoring"
 
 const PdfStructure = ({ data, t }) => {
   return (
@@ -36,8 +36,8 @@ const PdfStructure = ({ data, t }) => {
         <Mentoring data={data} styles={styles} t={t} />
       </Page>
     </Document>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   documentTitle: {
@@ -96,6 +96,6 @@ const styles = StyleSheet.create({
     backgroundColor: "grey",
     marginRight: 5,
   },
-});
+})
 
-export default PdfStructure;
+export default PdfStructure

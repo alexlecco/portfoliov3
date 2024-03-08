@@ -1,7 +1,7 @@
-import AddModeratorIcon from '@mui/icons-material/AddModerator';
+import AddModeratorIcon from '@mui/icons-material/AddModerator'
 
 const GoalsContainer = ({ theme, goals, t, language }) => {
-  const getGoalText = goal => (language === "english" ? goal.en : goal.es);
+  const getGoalText = goal => (language === "english" ? goal.en : goal.es)
 
   return (
     <div
@@ -23,7 +23,7 @@ const GoalsContainer = ({ theme, goals, t, language }) => {
           ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default GoalsContainer;
+export default GoalsContainer

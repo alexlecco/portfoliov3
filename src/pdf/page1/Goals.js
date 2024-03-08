@@ -1,8 +1,8 @@
-import React from "react";
-import { View, Text } from "@react-pdf/renderer";
+import React from "react"
+import { View, Text } from "@react-pdf/renderer"
 
 function Goals({ data, styles, t }) {
-  const getGoalText = goal => (data.language === "english" ? goal.en : goal.es);
+  const getGoalText = goal => (data.language === "english" ? goal.en : goal.es)
 
   return (
     <View style={styles.section}>
@@ -12,10 +12,10 @@ function Goals({ data, styles, t }) {
           <Text key={index} style={styles.sectionItem}>
             • {getGoalText(goal)}
           </Text>
-        );
+        )
       })}
     </View>
-  );
+  )
 }
 
-export default Goals;
+export default Goals

@@ -1,5 +1,5 @@
-import React from "react";
-import { View, Text, Image, Link } from "@react-pdf/renderer";
+import React from "react"
+import { View, Text, Image, Link } from "@react-pdf/renderer"
 
 const getSocialNetwork = (network, styles) => {
   return network.name !== "gmail" ? (
@@ -10,16 +10,16 @@ const getSocialNetwork = (network, styles) => {
       </View>
       <Link style={{ color: "#37aef7" }}>{network.url}</Link>
     </View>
-  ) : null;
-};
+  ) : null
+}
 
 const getAge = birthday => {
-  const formattedBirthday = new Date(birthday.year, birthday.month, birthday.day);
-  const diff_ms = Date.now() - formattedBirthday.getTime();
-  const age_dt = new Date(diff_ms);
+  const formattedBirthday = new Date(birthday.year, birthday.month, birthday.day)
+  const diff_ms = Date.now() - formattedBirthday.getTime()
+  const age_dt = new Date(diff_ms)
 
-  return Math.abs(age_dt.getUTCFullYear() - 1970);
-};
+  return Math.abs(age_dt.getUTCFullYear() - 1970)
+}
 
 function Presentation({ data, styles, t }) {
   return (
@@ -44,7 +44,7 @@ function Presentation({ data, styles, t }) {
       </Text>
       {data.social.map(network => getSocialNetwork(network, styles))}
     </View>
-  );
+  )
 }
 
-export default Presentation;
+export default Presentation

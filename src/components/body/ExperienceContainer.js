@@ -1,9 +1,9 @@
-import React from "react";
-import CheckIcon from "@material-ui/icons/Check";
+import React from "react"
+import CheckIcon from "@material-ui/icons/Check"
 
 const ExperienceContainer = ({ theme, experience, t, language }) => {
   const getDescription = description =>
-    language === "english" ? description.en : description.es;
+    language === "english" ? description.en : description.es
 
   return (
     <div
@@ -42,7 +42,7 @@ const ExperienceContainer = ({ theme, experience, t, language }) => {
           )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ExperienceContainer;
+export default ExperienceContainer

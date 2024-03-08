@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows";
-import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone";
+import React, { useState } from "react"
+import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows"
+import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone"
 
 function Portfolio({ project, typeProject, theme, language }) {
-  const [descripionVisible, setDescripionVisible] = useState(false);
-  const icon = typeProject === "web" ? <DesktopWindowsIcon /> : <PhoneIphoneIcon />;
-  const projectTextColor = theme === "Dark" ? "text-teal-400" : "text-orange-800";
+  const [descripionVisible, setDescripionVisible] = useState(false)
+  const icon = typeProject === "web" ? <DesktopWindowsIcon /> : <PhoneIphoneIcon />
+  const projectTextColor = theme === "Dark" ? "text-teal-400" : "text-orange-800"
   const toggleDescriptionVisibility = () => {
-    setDescripionVisible(!descripionVisible);
-  };
+    setDescripionVisible(!descripionVisible)
+  }
 
   const getDescription = description =>
-    language === "english" ? description.en : description.es;
+    language === "english" ? description.en : description.es
 
   return (
     <a href={project.url} target='blank'>
@@ -27,7 +27,7 @@ function Portfolio({ project, typeProject, theme, language }) {
         </div>
       </div>
     </a>
-  );
+  )
 }
 
-export default Portfolio;
+export default Portfolio

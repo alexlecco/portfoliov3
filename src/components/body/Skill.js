@@ -1,9 +1,9 @@
-import AddModeratorIcon from '@mui/icons-material/AddModerator';
+import AddModeratorIcon from '@mui/icons-material/AddModerator'
 
 
 const Skill = ({ theme, name, list, language }) => {
-  const itemTextColor = theme === "Dark" ? "text-teal-400" : "text-orange-800";
-  const getName = name => (language === "english" ? name.en : name.es);
+  const itemTextColor = theme === "Dark" ? "text-teal-400" : "text-orange-800"
+  const getName = name => (language === "english" ? name.en : name.es)
 
   const icon = (
     <div className='text-center text-xl'>
@@ -21,7 +21,7 @@ const Skill = ({ theme, name, list, language }) => {
         <AddModeratorIcon />
       )}
     </div>
-  );
+  )
 
   return (
     <div className={`my-8 flex w-full md:w-1/3`}>
@@ -37,7 +37,7 @@ const Skill = ({ theme, name, list, language }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Skill;
+export default Skill

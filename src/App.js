@@ -1,34 +1,34 @@
-import { useState } from "react";
+import { useState } from "react"
 import './App.css'
 
 // dependencies
-import * as Scroll from "react-scroll";
-import { useTranslation } from "react-i18next";
+import * as Scroll from "react-scroll"
+import { useTranslation } from "react-i18next"
 
 // constants
 import { user } from './react-portfolio'
 
 // components
-import Presentation from "./components/Presentation";
-import GoalsContainer from "./components/body/GoalsContainer";
-import SkillsContainer from "./components/body/SkillsContainer";
+import Presentation from "./components/Presentation"
+import GoalsContainer from "./components/body/GoalsContainer"
+import SkillsContainer from "./components/body/SkillsContainer"
 
-let Element = Scroll.Element;
-let scroller = Scroll.scroller;
+let Element = Scroll.Element
+let scroller = Scroll.scroller
 
 function App() {
-  const [language, setLanguage] = useState("english");
-  const [theme, setTheme] = useState("Dark");
-  const { t, i18n } = useTranslation("common");
+  const [language, setLanguage] = useState("english")
+  const [theme, setTheme] = useState("Dark")
+  const { t, i18n } = useTranslation("common")
 
   const changeTheme = () => {
-    setTheme(theme === "Dark" ? "Light" : "Dark");
-  };
+    setTheme(theme === "Dark" ? "Light" : "Dark")
+  }
 
   const changeLanguage = lang => {
-    i18n.changeLanguage(lang === "english" ? "es" : "en");
-    setLanguage(lang === "english" ? "spanish" : "english");
-  };
+    i18n.changeLanguage(lang === "english" ? "es" : "en")
+    setLanguage(lang === "english" ? "spanish" : "english")
+  }
 
   const {
     avatar,
@@ -50,7 +50,7 @@ function App() {
     languages,
     social,
     claps,
-  } = user;
+  } = user
 
   return (
     <div className='bg-fixed bg-center bg-cover md:pr-48 md:pl-48 select-none md:select-text'
@@ -92,6 +92,7 @@ function App() {
         <Element name='skillsElement'>
           <SkillsContainer theme={theme} skills={skills} t={t} language={language} />
         </Element>
+
       </div>
     </div>
   )

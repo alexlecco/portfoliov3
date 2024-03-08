@@ -1,14 +1,14 @@
-import React from "react";
+import React from "react"
 
 const Footer = ({ name, theme }) => {
   const getStringYear = () => {
-    const today = new Date(Date.now());
-    const year = today.toString().substring(11, 15);
+    const today = new Date(Date.now())
+    const year = today.toString().substring(11, 15)
 
-    return year;
-  };
+    return year
+  }
 
-  const year = getStringYear();
+  const year = getStringYear()
 
   return (
     <div className="p-6 text-red-100">
@@ -16,7 +16,7 @@ const Footer = ({ name, theme }) => {
         {name} - {year}
       </h3>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

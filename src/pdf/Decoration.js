@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Image } from "@react-pdf/renderer";
+import { View, Image } from "@react-pdf/renderer"
 
 function Decoration() {
   return (

@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import AddModeratorIcon from '@mui/icons-material/AddModerator';
+import React, { useState } from "react"
+import AddModeratorIcon from '@mui/icons-material/AddModerator'
 
-import useWindowWidth from "../hooks/useWindowWidth";
+import useWindowWidth from "../hooks/useWindowWidth"
 
 function NavigatorMenu({ theme, scroller, t }) {
-  const [openedMenu, setOpenedMenu] = useState(false);
-  const { width } = useWindowWidth();
+  const [openedMenu, setOpenedMenu] = useState(false)
+  const { width } = useWindowWidth()
 
   const toggleMenu = () => {
-    setOpenedMenu(prevOpenedMenu => !prevOpenedMenu);
-  };
+    setOpenedMenu(prevOpenedMenu => !prevOpenedMenu)
+  }
 
   const scrollToElement = element => {
     scroller.scrollTo(element, {
       duration: 800,
       delay: 0,
       smooth: "easeInOutQuart",
-    });
-  };
+    })
+  }
 
   return (
     <>
@@ -107,7 +107,7 @@ function NavigatorMenu({ theme, scroller, t }) {
         </div>
       )}
     </>
-  );
+  )
 }
 
-export default NavigatorMenu;
+export default NavigatorMenu
