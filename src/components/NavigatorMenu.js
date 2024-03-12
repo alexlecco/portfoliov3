@@ -21,7 +21,7 @@ function NavigatorMenu({ theme, scroller, t }) {
 
   return (
     <>
-      {width < 768 ? (
+      {width < 768 ? ( //TODOx: delete magic numbers
         <>
           {openedMenu ? (
             <div onClick={toggleMenu}>

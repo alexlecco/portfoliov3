@@ -29,6 +29,7 @@
   text-align: center;
   /*background-color: darkviolet;*/
   color: white;
+  margin-top: 5px;
 }
 
 .Light {
@@ -74,7 +75,9 @@
 
 .presentation-flag {
   height: 45px; /*5vmin*/
+  width: 45px; /*5vmin*/
   pointer-events: none;
+  margin-right: 15px;
 }
 
 @media (min-width: 767px) {
@@ -119,7 +122,7 @@
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .unstyled-button:focus {
