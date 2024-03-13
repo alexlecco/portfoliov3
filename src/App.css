@@ -73,13 +73,6 @@
   pointer-events: none;
 }
 
-.presentation-flag {
-  height: 45px; /*5vmin*/
-  width: 45px; /*5vmin*/
-  pointer-events: none;
-  margin-right: 15px;
-}
-
 @media (min-width: 767px) {
   .image__left {
     max-width: 165px;

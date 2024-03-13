@@ -180,10 +180,12 @@ const Presentation = ({
             alt='avatar'
           />
         </div>
-        <div className='md:w-1/2 md:flex md:flex-col md:justify-center md:items-start presentation__right'>
-          <div className='flex flex-row justify-center align-middle pb-3'>
-            <img src={flag} className="presentation-flag" alt="flag" />
-            <h2 className={`text-3xl ${theme}-transparent`}>{name}</h2>
+        <div>
+          <div className='md:h-20 flex-none flex flex-row justify-between w-64 md:w-full mx-auto p-2 md:mb-3'>
+            <img src={flag} className="w-12 h-12 md:w-10 md:h-10 my-auto md:mr-3" alt="flag" />
+            <div className={'my-auto text-center'}>
+              <h2 className={`text-3xl ${theme}-transparent`}>{name}</h2>
+            </div>
           </div>
           <div className={`text-lg ${profileTextColor} mb-4`}>{profile}</div>
           <div className='flex justify-center align-center'>

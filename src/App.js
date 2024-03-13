@@ -57,8 +57,6 @@ function App() {
     claps,
   } = user
 
-  console.log("language::::::::::::::::::::::", language)
-
   return (
     <Suspense fallback='loading'>
       <div className='bg-fixed bg-center bg-cover md:pr-48 md:pl-48 select-none md:select-text'

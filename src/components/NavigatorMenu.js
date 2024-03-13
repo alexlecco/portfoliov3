@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import AddModeratorIcon from '@mui/icons-material/AddModerator'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 import useWindowWidth from "../hooks/useWindowWidth"
 
@@ -21,18 +22,18 @@ function NavigatorMenu({ theme, scroller, t }) {
 
   return (
     <>
-      {width < 768 ? ( //TODOx: delete magic numbers
+      {width < 700 ? ( //TODOx: delete magic numbers
         <>
           {openedMenu ? (
             <div onClick={toggleMenu}>
-              <AddModeratorIcon
+              <ExpandLessIcon
                 fontSize='large'
                 className={`${theme}-transparent cursor-pointer mb-2`}
               />
             </div>
           ) : (
             <div onClick={toggleMenu}>
-              <AddModeratorIcon
+              <ExpandMoreIcon
                 fontSize='large'
                 className={`${theme}-transparent cursor-pointer mb-2`}
               />
@@ -42,7 +43,7 @@ function NavigatorMenu({ theme, scroller, t }) {
             <ul
               className={`${theme}-transparent md:flex md:flex-row md:justify-center md:align-middle md:pb-8`}
             >
-              <li className='md:pr-32 py-2 mb-2 md:pb-0 cursor-pointer'>
+              <li className='md:pr-32 py-2 my-2 md:pb-0 cursor-pointer'>
                 <p
                   className='mb-2 background-shadow'
                   onClick={() => scrollToElement("goalsElement")}
