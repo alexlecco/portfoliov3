@@ -1,4 +1,4 @@
-import { useState, Suspense } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import './App.css'
 
 // dependencies
@@ -6,7 +6,7 @@ import * as Scroll from 'react-scroll'
 import { useTranslation } from 'react-i18next'
 
 // constants
-import { user } from './portfolio-mockup-data'
+import database from './firebase';
 
 // components
 import Presentation from './components/Presentation'
@@ -23,7 +23,45 @@ let scroller = Scroll.scroller
 function App() {
   const [language, setLanguage] = useState(navigator.language)
   const [theme, setTheme] = useState('Dark')
+  const [user, setUser] = useState({});
+  const [loading, setLoading] = useState(true);
   const { t, i18n } = useTranslation()
+
+  useEffect(() => {
+    const userRef = database.ref().child("data")
+    listenForUser(userRef)
+  }, [])
+
+  const listenForUser = userRef => {
+    userRef.on("value", snap => {
+      const user = {
+        name: snap.val().name,
+        city: snap.val().city,
+        country: snap.val().country,
+        birthday: snap.val().birthday,
+        phone: snap.val().phone,
+        email: snap.val().email,
+        profile: snap.val().profile,
+        flag: snap.val().flag,
+        avatar: snap.val().avatar,
+        coverdark: snap.val().coverdark,
+        coverlight: snap.val().coverlight,
+        goals: snap.val().goals,
+        studies: snap.val().studies,
+        experience: snap.val().experience,
+        mentoring: snap.val().mentoring,
+        skills: snap.val().skills,
+        languages: snap.val().languages,
+        portfolio: snap.val().portfolio,
+        social: snap.val().social,
+        claps: snap.val().claps,
+        _key: snap.key,
+      }
+
+      setUser(user)
+      setLoading(false)
+    })
+  }
 
   const changeTheme = () => {
     setTheme(theme === 'Dark' ? 'Light' : 'Dark')
@@ -56,6 +94,13 @@ function App() {
     social,
     claps,
   } = user
+
+  if (loading)
+  return (
+    <div className='h-screen bg-gray-400 flex flex-col items-center justify-center'>
+      loading...
+    </div>
+  );
 
   return (
     <Suspense fallback='loading'>
