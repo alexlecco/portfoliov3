@@ -14,13 +14,13 @@ const PorfolioContainer = ({ theme, portfolio, t, language }) => {
     <div
       className={`min-h-screen flex flex-col justify-center align-items-center ${theme} h-auto pl-8 pr-8 md:pr-20 md:pl-20 pb-20`}
     >
-      <h1 className='text-center md:text-right md:pr-24 text-lg pt-8'>
+      <h1 className='text-center md:text-left md:pl-24 text-lg pt-8'>
         {t("titles.title4.title")}
         <span className='ml-2' role='img' aria-label='Personal Portfolio'>
           💼
         </span>
       </h1>
-      <h2 className='text-center md:text-right md:pr-24 text-sm'>
+      <h2 className='text-center md:text-left md:pl-20 text-sm'>
         <span className='hidden md:inline-block'>
           ({t("titles.title4.subtitle.web")})
         </span>

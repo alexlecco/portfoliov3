@@ -5,7 +5,7 @@ const SkillsContainer = ({ theme, skills, t, language }) => {
     <div
       className={`min-h-screen flex flex-col justify-center align-items-center ${theme} h-auto pr-8 pl-8 md:pr-20 md:pl-20 pb-20`}
     >
-      <h1 className='text-center md:text-right md:pr-24 text-lg pt-8'>
+      <h1 className='text-center md:text-left md:pl-24 text-lg pt-8'>
         {t("titles.title2")}
         <span className='ml-2' role='img' aria-label='Technical Skills'>
           🏅

@@ -1,5 +1,9 @@
-import AddModeratorIcon from '@mui/icons-material/AddModerator'
-
+import DesktopWindowsIcon from "@mui/icons-material/DesktopWindows";
+import CodeIcon from "@mui/icons-material/Code";
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import StorageIcon from "@mui/icons-material/Storage";
+import BuildIcon from "@mui/icons-material/Build";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 
 const Skill = ({ theme, name, list, language }) => {
   const itemTextColor = theme === "Dark" ? "text-teal-400" : "text-orange-800"
@@ -8,17 +12,17 @@ const Skill = ({ theme, name, list, language }) => {
   const icon = (
     <div className='text-center text-xl'>
       {name.en === "front-end" ? (
-        <AddModeratorIcon />
+        <DesktopWindowsIcon />
       ) : name.en === "back-end" ? (
-        <AddModeratorIcon />
+        <CodeIcon />
       ) : name.en === "mobile" ? (
-        <AddModeratorIcon />
+        <PhoneIphoneIcon />
       ) : name.en === "databases" ? (
-        <AddModeratorIcon />
+        <StorageIcon />
       ) : name.en === "tools" ? (
-        <AddModeratorIcon />
+        <BuildIcon />
       ) : (
-        <AddModeratorIcon />
+        <MenuBookIcon />
       )}
     </div>
   )
