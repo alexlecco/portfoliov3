@@ -21,7 +21,7 @@ let Element = Scroll.Element
 let scroller = Scroll.scroller
 
 function App() {
-  const [language, setLanguage] = useState(navigator.language)
+  const [language, setLanguage] = useState('english')
   const [theme, setTheme] = useState('Dark')
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);

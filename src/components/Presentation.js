@@ -1,11 +1,10 @@
-// import { useState, useEffect } from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import GetAppIcon from "@mui/icons-material/GetApp";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import NavigatorMenu from "./NavigatorMenu"
 import { PDFDownloadLink } from "@react-pdf/renderer"
 import PdfStructure from "../pdf/PdfStructure"
-// import database from "../firebase"
+import database from "../firebase"
 
 const Presentation = ({
   flag,
@@ -33,53 +32,24 @@ const Presentation = ({
   mentoring,
   t,
 }) => {
-  const [labelsVisible, setLabelsVisible] = useState({
-    theme: false,
-    language: false,
-    claps: false,
-    resume: false,
-  })
-  // const [localClaps, setLocalClaps] = useState(claps)
+  const [localClaps, setLocalClaps] = useState(claps)
 
   const profileTextColor = theme === "Dark" ? "text-teal-400" : "text-orange-900"
-  const changeThemeText =
-    theme === "Dark" ? t("topbar.button1.light") : t("topbar.button1.dark")
-  const languageText = t("topbar.button2")
   const clapsText = `${claps} ${t("topbar.button3")}`
   const getMyResumeText = t("topbar.button4")
 
-  // useEffect(() => {
-  //   const userRef = database.ref().child("data").child("claps")
-  //   setTimeout(userRef.set(localClaps), 1000)
-  // }, [localClaps])
-
-  const toggleLabelsVisible = e => {
-    switch (e.currentTarget.classList[1]) {
-      case "theme":
-        setLabelsVisible({ ...labelsVisible, theme: !labelsVisible.theme })
-        break
-      case "language":
-        setLabelsVisible({
-          ...labelsVisible,
-          language: !labelsVisible.language,
-        })
-        break
-      case "claps":
-        setLabelsVisible({ ...labelsVisible, claps: !labelsVisible.claps })
-        break
-      default:
-        setLabelsVisible({ ...labelsVisible, resume: !labelsVisible.resume })
-        break
-    }
-  }
+  useEffect(() => {
+    const userRef = database.ref().child("data").child("claps")
+    userRef.set(localClaps)
+  }, [localClaps])
 
   const handleChangeLanguage = () => {
     changeLanguage(language)
   }
 
-  // const incrementClaps = () => {
-  //   setLocalClaps(claps + 1)
-  // }
+  const incrementClaps = () => {
+    setLocalClaps(claps + 1)
+  }
 
   const userData = {
     language,
@@ -110,32 +80,21 @@ const Presentation = ({
             <Brightness4Icon
               fontSize='small'
               className='theme cursor-pointer'
-              onMouseEnter={toggleLabelsVisible}
-              onMouseLeave={toggleLabelsVisible}
             />
-            {labelsVisible.theme && (
-              <p className='hidden md:inline noselect text-sm'>{changeThemeText}</p>
-            )}
           </div>
           <div
             className='flex flex-col items-center p-6 mt-1 w-20 h-20'
             onClick={handleChangeLanguage}
           >
-            <p
-              className='cursor-pointer language noselect'
-              onMouseEnter={toggleLabelsVisible}
-              onMouseLeave={toggleLabelsVisible}
-            >
+            <p className='cursor-pointer language noselect' >
               {language === "english" ? "EN" : "ES"}
             </p>
-            {labelsVisible.language && <p className='text-sm'>{languageText}</p>}
           </div>
         </div>
         <div className='flex flex-row'>
           <div
             className='flex flex-col items-center p-7 w-24 h-20 md:mr-2'
-            // onClick={incrementClaps}
-            onClick={() => {}}
+            onClick={incrementClaps}
           >
             <img
               src='https://cdn4.iconfinder.com/data/icons/hand-touch-gesture/64/hand_touch_gesture_claps_applause_apreciation-512.png'
@@ -143,19 +102,13 @@ const Presentation = ({
               className={`cursor-pointer claps clap-img ${
                 theme === "Dark" ? "filter-inverse" : null
               }`}
-              onMouseEnter={toggleLabelsVisible}
-              onMouseLeave={toggleLabelsVisible}
             />
-            {labelsVisible.claps && (
-              <p className='flex-row hidden md:inline noselect text-sm'>
-                {clapsText}
-              </p>
-            )}
+            <p className='flex-row md:inline noselect text-sm mt-3'>
+              {clapsText}
+            </p>
           </div>
           <div
             className='p-8 w-20 h-20'
-            onMouseEnter={toggleLabelsVisible}
-            onMouseLeave={toggleLabelsVisible}
           >
             <PDFDownloadLink
               document={<PdfStructure data={userData} t={t} />}
@@ -163,11 +116,9 @@ const Presentation = ({
               className='flex flex-col items-center'
             >
               <GetAppIcon fontSize='small' className='resume cursor-pointer' />
-              {labelsVisible.resume && (
-                <p className='hidden md:inline noselect text-sm'>
-                  {getMyResumeText}
-                </p>
-              )}
+              <p className='md:inline noselect text-sm mt-2'>
+                {getMyResumeText}
+              </p>
             </PDFDownloadLink>
           </div>
         </div>
