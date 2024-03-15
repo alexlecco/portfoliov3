@@ -62,27 +62,27 @@ function NavigatorMenu({ theme, scroller, t }) {
           className={`${theme}-transparent md:flex md:flex-row md:justify-center md:align-middle md:pb-28`}
         >
           <li className='md:pr-28 pb-10 md:pb-0 cursor-pointer'>
-            <p className='' onClick={() => scrollToElement("goalsElement")}>
+            <p className='background-shadow' onClick={() => scrollToElement("goalsElement")}>
               {t("presentation.item1")}
             </p>
           </li>
           <li className='md:pr-28 pb-10 md:pb-0 cursor-pointer'>
-            <p onClick={() => scrollToElement("skillsElement")}>
+            <p className='background-shadow' onClick={() => scrollToElement("skillsElement")}>
               {t("presentation.item2")}
             </p>
           </li>
           <li className='md:pr-28 pb-10 md:pb-0 cursor-pointer'>
-            <p onClick={() => scrollToElement("experienceElement")}>
+            <p className='background-shadow' onClick={() => scrollToElement("experienceElement")}>
               {t("presentation.item3")}
             </p>
           </li>
           <li className='md:pr-28 pb-10 md:pb-0 cursor-pointer'>
-            <p onClick={() => scrollToElement("portfolioElement")}>
+            <p className='background-shadow' onClick={() => scrollToElement("portfolioElement")}>
               {t("presentation.item4")}
             </p>
           </li>
           <li className='pb-10 md:pb-0 cursor-pointer'>
-            <p onClick={() => scrollToElement("contactElement")}>
+            <p className='background-shadow' onClick={() => scrollToElement("contactElement")}>
               <span className='no-select'>{t("presentation.item5")}</span>
             </p>
           </li>
