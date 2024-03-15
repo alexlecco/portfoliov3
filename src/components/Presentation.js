@@ -51,6 +51,15 @@ const Presentation = ({
     setLocalClaps(claps + 1)
   }
 
+  const getStringYear = () => {
+    const today = new Date(Date.now())
+    const year = today.toString().substring(11, 15)
+
+    return year
+  }
+
+  const year = getStringYear()
+
   const userData = {
     language,
     name,
@@ -112,7 +121,7 @@ const Presentation = ({
           >
             <PDFDownloadLink
               document={<PdfStructure data={userData} t={t} />}
-              fileName='alex-resume.pdf'
+              fileName={`alex-resume-${year}.pdf`}
               className='flex flex-col items-center'
             >
               <GetAppIcon fontSize='small' className='resume cursor-pointer' />

@@ -16,6 +16,9 @@ import ExperienceContainer from './components/body/ExperienceContainer'
 import PortfolioContainer from './components/body/PortfolioContainer'
 import Contact from './components/body/Contact'
 import Footer from './components/Footer'
+// uncomment to show resume PDF
+// import PdfStructure from "./pdf/PdfStructure"
+// import { PDFViewer } from "@react-pdf/renderer"
 
 let Element = Scroll.Element
 let scroller = Scroll.scroller
@@ -110,6 +113,10 @@ function App() {
         }}
       >
         <div className={`bg-transparent text-center min-h-screen`}>
+          {/* uncomment to show resume PDF */}
+          {/* <PDFViewer width={1500} height={1500}>
+            <PdfStructure data={user} t={t} />
+          </PDFViewer> */}
           <Presentation
             avatar={avatar}
             flag={flag}

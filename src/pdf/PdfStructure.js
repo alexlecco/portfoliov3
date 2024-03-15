@@ -10,11 +10,20 @@ import Experience from "./page3/Experience"
 import Mentoring from "./page4/Mentoring"
 
 const PdfStructure = ({ data, t }) => {
+  const getStringYear = () => {
+    const today = new Date(Date.now())
+    const year = today.toString().substring(11, 15)
+
+    return year
+  }
+
+  const year = getStringYear()
+
   return (
     <Document
       author='Alex Villecco'
-      subject='Resume of Alex'
-      title='Alex Villecco resume'
+      subject={`Resume of Alex - ${year}`}
+      title={`Alex Villecco resume - ${year}`}
     >
       <Page style={styles.page}>
         <Presentation data={data} styles={styles} t={t} />
@@ -32,7 +41,7 @@ const PdfStructure = ({ data, t }) => {
         <Experience data={data} styles={styles} t={t} />
       </Page>
 
-      <Page style={styles.pageTop}>
+      <Page style={styles.page}>
         <Mentoring data={data} styles={styles} t={t} />
       </Page>
     </Document>
@@ -46,9 +55,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   page: {
-    flex: 1,
-    justifyContent: "space-around",
-    padding: 60,
+    padding: 20,
     color: "#8D8F8D",
     fontSize: 14,
   },
