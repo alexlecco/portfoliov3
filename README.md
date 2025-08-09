@@ -1,4 +1,4 @@
-# Alex Lecco's Portfolio 2024
+# Alex Lecco's Portfolio Ago 2025
 
 This is the 2024 version of my professional porfolio.
 
